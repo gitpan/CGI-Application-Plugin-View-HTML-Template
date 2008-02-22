@@ -7,5 +7,5 @@ WriteMakefile(
     },
     ($] >= 5.005 ?
       (ABSTRACT_FROM  => 'lib/CGI/Application/Plugin/View/HTML/Template.pm',
-       AUTHOR         => 'Mark Fuller <mfuller@gmail.org>') : ()),
+       AUTHOR         => 'Mark Fuller <mfuller @ g m a i l /.\ o r g>') : ()),
 );

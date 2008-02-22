@@ -7,7 +7,7 @@ use vars qw($VERSION);
 require Exporter;
 
 
-$VERSION = '0.01';
+$VERSION = '0.02';
 
 sub import { my $caller = scalar(caller);
              $caller->add_callback('postrun', \&my_postrun);
@@ -92,11 +92,11 @@ CGI::Application::Plugin::View adds L<Catalyst>-like view processing to CGI::App
 module automatically renders templates without setting template params or calling the template
 output method.
 
-This module has no methods. Simply store your template and var(s) (L<Plugin::Stash> is recommended),
-and return from your runmode without returning template output. This module will automatically
-populate variables found in your template, and output it.
+This module has no methods. Simply store your template and var(s) (L<CGI::Application::Plugin::Stash>
+is recommended), and return from your runmode without returning template output. This module will
+automatically populate variables found in your template, and output it.
 
-This module was inspired by L<Plugin::Stash>. When I read the L<Catalyst::Manual::Tutorial> two
+This module was inspired by Plugin::Stash. When I read the L<Catalyst::Manual::Tutorial> two
 things seemed elegant to me: Stash and the way the template is processed automatically when the
 controller method is left. When I saw Plugin::Stash it caused me to remember the other thing I 
 liked. So, I created this module. It doesn't do much. At a minimum it's a simple example of how to
@@ -112,9 +112,13 @@ L<Catalyst>
 
 For additonal Catalyst-like functionality, see:
 
-L<CGI::Application::Plugin::Stash>
-L<CGI::Application::Plugin::Forward>
 L<CGI::Application::Plugin::ActionDispatch>
+
+L<CGI::Application::Plugin::DebugScreen>
+
+L<CGI::Application::Plugin::Forward>
+
+L<CGI::Application::Plugin::Stash>
 
 =head1 AUTHOR
 
